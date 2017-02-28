@@ -11,6 +11,9 @@ import tw.elliot.data.jpa.domain.Book;
 import tw.elliot.data.jpa.repositories.BookRepository;
 
 import javax.sql.DataSource;
+import java.util.List;
+
+import static org.junit.Assert.*;
 
 
 /**
@@ -37,5 +40,7 @@ public class SystemTest {
     @Test
     public void repositoryTest() {
         this.bookRepository.save(new Book("abook"));
+        List<Book> books = this.bookRepository.findByName("abook");
+        assertEquals(1, books.size());
     }
 }

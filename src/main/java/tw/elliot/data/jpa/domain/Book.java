@@ -1,5 +1,7 @@
 package tw.elliot.data.jpa.domain;
 
+import org.springframework.data.domain.Auditable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

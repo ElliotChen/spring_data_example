@@ -12,6 +12,19 @@
 		<spring.version>4.3.6.RELEASE</spring.version>
 		<hibernate.version>5.2.7.Final</hibernate.version>
 	</properties>
+	<!--
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-releasetrain</artifactId>
+				<version>Hopper-SR7</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	-->
 	<dependencies>
 		<!-- Java Spec -->
 		<dependency>
@@ -85,5 +98,16 @@
 		</dependency>
 	</dependencies>
 	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 </project>
