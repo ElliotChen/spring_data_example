@@ -60,9 +60,10 @@ public class SystemTest {
         /*
          * Using Page for pagination
          */
+        /*
         Page<Book> books = this.bookRepository.findByAuthor_Gender(Gender.Male, new PageRequest(1, 10));
         logger.info("Books number is " + books.getTotalElements());
-
+        */
         /*
          * -- Example and ExampleMatcher --
          * Using Example.of(instance of Entity, (optional) a matcher)) to find one or many.

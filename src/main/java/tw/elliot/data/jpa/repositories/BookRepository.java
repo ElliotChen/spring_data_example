@@ -3,6 +3,7 @@ package tw.elliot.data.jpa.repositories;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import tw.elliot.data.jpa.domain.Book;
 import tw.elliot.data.jpa.domain.Gender;
 
@@ -11,6 +12,7 @@ import java.util.List;
 /**
  * Created by elliot on 24/02/2017.
  */
+@RepositoryRestResource(path = "book")
 public interface BookRepository extends JpaRepository<Book, Long> {
     /**
      * sample _ find by fields
@@ -31,6 +33,7 @@ public interface BookRepository extends JpaRepository<Book, Long> {
      * @return
      */
     public List<Book> findByAuthor_Gender(Gender gender);
-
+    /*
     public Page<Book> findByAuthor_Gender(Gender gender, Pageable pageable);
+    */
 }
